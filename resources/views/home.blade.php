@@ -1,15 +1,6 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layout.main_layout')
 
-        <title>Laravel</title>
+@section('content')
+    <h1>DC Comics</h1>
+@endsection
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-    </head>
-    <body>
-        
-    </body>
-</html>
