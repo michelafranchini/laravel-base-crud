@@ -10,7 +10,11 @@
             {{-- <p>{{$comic->description}}</p>   --}}
             <a href="{{route('comics.show', $comic->id)}}">Show</a>  
             <a href="{{route('comics.edit', $comic->id)}}">Edit</a>
-            <a href="{{route('comics.show', $comic->id)}}">Delete</a>
+            <form action="{{route('comics.destroy', $comic->id)}}" method="post">
+                @csrf
+                @method('DELETE')
+                <input type="submit" class="btn btn-danger" value="DELETE">
+            </form>
         </div>
         @endforeach
 
