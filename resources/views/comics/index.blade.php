@@ -9,7 +9,7 @@
             <img src="{{$comic->thumb}}" alt="">
             {{-- <p>{{$comic->description}}</p>   --}}
             <a href="{{route('comics.show', $comic->id)}}">Show</a>  
-            <a href="{{route('comics.show', $comic->id)}}">Edit</a>
+            <a href="{{route('comics.edit', $comic->id)}}">Edit</a>
             <a href="{{route('comics.show', $comic->id)}}">Delete</a>
         </div>
         @endforeach
