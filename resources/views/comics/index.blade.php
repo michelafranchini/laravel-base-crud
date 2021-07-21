@@ -10,7 +10,8 @@
             {{-- <p>{{$comic->description}}</p>   --}}
             <a href="{{route('comics.show', $comic->id)}}">Show</a>  
             <a href="{{route('comics.edit', $comic->id)}}">Edit</a>
-            <form action="{{route('comics.destroy', $comic->id)}}" method="post">
+            <form action="{{route('comics.destroy', $comic->id)}}" method="post"
+                onsubmit="return confirm('Sei sicuro di voler cancellare definitivamente {{ $comic->title }}?')">
                 @csrf
                 @method('DELETE')
                 <input type="submit" class="btn btn-danger" value="DELETE">
